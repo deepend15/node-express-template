@@ -1,15 +1,15 @@
 import { Client } from "pg";
 
-const SQL = `
-CREATE TABLE IF NOT EXISTS [tableName] (
-  id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
-   [column info]
-);
+// const SQL = `
+// CREATE TABLE IF NOT EXISTS [tableName] (
+//   id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+//    [column info]
+// );
 
-INSERT INTO [tableName] ([columns])
-VALUES
-  ([value info])
-`;
+// INSERT INTO [tableName] ([columns])
+// VALUES
+//   ([value info])
+// `;
 
 async function main() {
   console.log("Seeding...");
