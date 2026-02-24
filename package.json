@@ -4,8 +4,8 @@
   "description": "Includes Express, EJS, express-validator, &amp; pg. May update in the future with more.",
   "main": "app.js",
   "scripts": {
-    "start": "node --env-file-if-exists=.env app.js",
-    "dev": "node --run start -- --watch",
+    "start": "node app.js",
+    "dev": "node --env-file=.env --watch app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "push": "git push origin main"
   },
