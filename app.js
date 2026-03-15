@@ -15,6 +15,11 @@ app.use(express.static(assetsPath));
 
 app.use(express.urlencoded({ extended: true }));
 
+// prevent 404 errors from missing favicon; remove if favicon is added
+app.get('/favicon.ico', (req, res) => {
+  res.status(204).end();
+});
+
 // app.use() / router(s) info
 
 // 404 error
@@ -24,6 +29,7 @@ app.use((req, res, next) => {
 
 // error handler
 app.use((err, req, res, next) => {
+  console.log("Request URL:", req.url);
   console.error(err);
   if (err.statusCode) {
     res.status(err.statusCode).send(`${err.statusCode} Error: ${err.message}`);
